@@ -2,6 +2,10 @@ name: Ubuntu SSH
 
 on:
   workflow_dispatch:
+  inputs:
+      git-ref:
+        description: Start with b164a616a8831ab6ac92b6aceb91f5e3b7bab82b Git-Ref (Focal)
+        required: false
 
 jobs:
   ssh:
@@ -38,7 +42,7 @@ jobs:
           EOF
       - name: SSH connection to Actions
         continue-on-error: true
-        timeout-minutes: 340
+        timeout-minutes: 600
         uses: P3TERX/ssh2actions@main
         with:
           mode: ngrok
