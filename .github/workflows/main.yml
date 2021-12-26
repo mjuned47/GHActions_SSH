@@ -27,7 +27,7 @@ jobs:
           mkdir -p ~/.ssh
           cat << EOF > ~/.ssh/config
           Host *
-              ServerAliveInterval 60
+              ServerAliveInterval 120
               StrictHostKeyChecking no
           Host github.com
               User git
@@ -38,7 +38,7 @@ jobs:
           EOF
       - name: SSH connection to Actions
         continue-on-error: true
-        timeout-minutes: 600
+        timeout-minutes: 240
         uses: P3TERX/ssh2actions@main
         with:
           mode: ngrok
