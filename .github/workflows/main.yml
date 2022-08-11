@@ -6,9 +6,6 @@ on:
 jobs:
   ssh:
     runs-on: ubuntu-latest
-    with:
-          arch: aarch64
-          distro: ubuntu-latest
 
     env:
       GitHubMail: ${{ secrets.GitHubMail }}
@@ -16,6 +13,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@main
+        with:
+          arch: aarch64
+          distro: ubuntu-latest
 
       - name: Set Git Configs & Secrets
         run: |
