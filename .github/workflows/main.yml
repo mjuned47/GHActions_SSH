@@ -6,6 +6,9 @@ on:
 jobs:
   ssh:
     runs-on: ubuntu-latest
+    with:
+          arch: aarch64
+          distro: ubuntu-latest
 
     env:
       GitHubMail: ${{ secrets.GitHubMail }}
