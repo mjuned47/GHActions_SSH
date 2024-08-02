@@ -43,7 +43,7 @@ jobs:
       - name: SSH connection to Actions
         continue-on-error: true
         timeout-minutes: 240
-        uses: P3TERX/ssh2actions@main
+        uses: mjuned47/ssh2actions@main
         with:
           mode: ngrok
         env:
