@@ -12,7 +12,7 @@ jobs:
       GitHubName: ${{ secrets.GitHubName }}
 
     steps:
-      - uses: actions/checkout@main
+      - uses: actions/checkout@v4
         with:
           arch: aarch64
           distro: ubuntu-latest
